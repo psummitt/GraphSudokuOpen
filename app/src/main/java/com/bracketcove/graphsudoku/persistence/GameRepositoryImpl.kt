@@ -117,6 +117,7 @@ class GameRepositoryImpl(
                     }
                     //4d
                     is SettingsStorageResult.OnError -> onError(getSettingsResult.exception)
+                    else -> {}
                 }
             }
         }
@@ -135,6 +136,7 @@ class GameRepositoryImpl(
                 }
             }
             is SettingsStorageResult.OnError -> onError(updateSettingsResult.exception)
+            else -> {}
         }
     }
 
@@ -152,6 +154,7 @@ class GameRepositoryImpl(
         when (val getSettingsResult = settingsStorage.getSettings()) {
             is SettingsStorageResult.OnSuccess -> onSuccess(getSettingsResult.settings)
             is SettingsStorageResult.OnError -> onError(getSettingsResult.exception)
+            else -> {}
         }
     }
 

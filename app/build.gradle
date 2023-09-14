@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'com.google.protobuf' version "0.8.12"
+    id 'com.google.protobuf' version '0.9.0'
 }
 
 android {
@@ -43,6 +43,7 @@ android {
         kotlinCompilerExtensionVersion compose_version
         kotlinCompilerVersion kotlin_version
     }
+    namespace 'com.bracketcove.graphsudoku'
 }
 
 dependencies {
